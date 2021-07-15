@@ -1,14 +1,10 @@
-# Git
+# Git basic
 
-> 우리가 앞으로 공부할 땐
->
 >What : 이게 뭐냐
 >
 >Why : 이거 왜 씀
 >
 >How : 그래서 어떻게 씀
->
->순으로 학습한다.
 
 
 
@@ -53,15 +49,17 @@
 
 ### git 기본 명령어
 
-`git init` : git 로컬 저장소 생성
+`$ git init` : git 로컬 저장소 생성
 
-`git add .` :  촬영 준비
+`$ git add .` :  촬영 준비
 
-`git commit -m "Message"` :  촬영~
+`$ git commit -m "<Message>"` :  촬영~
 
-`git log` :  log 확인
+`$ git log` :  log 확인
 
-`git push origin master` : 푸시
+`$ git push origin master` : 푸시
 
+`$ git remote add origin <URL>  ` : 리모트 저장소와 연결
 
+`$ git status` : git 현재 상태 확인
 
