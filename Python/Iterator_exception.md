@@ -62,3 +62,43 @@ l e
 
 그래서 위의 코드에서 한번 이터레이션에 소진된 `comb`가 빈 컨테이너가 되어 `'local'` 문자열부터는 아무것도 출력되지 않은 것이다.
 
+자주 쓰는 `map`도 마찬가지다.
+
+```python
+map_object = map(lambda num : num +1, [1,2,3,4])
+for num in map_object:
+    print(num)
+    
+for num in map_object:
+    print(num)
+```
+
+```
+2
+3
+4
+5
+```
+
+한번 순회하고 나면 더 이상 출력되는 숫자가 없다.
+
+심지어
+
+```python
+map_object = map(lambda num : num +1, [1,2,3,4])
+first_list = list(map_object)
+print(first_list)
+second_list = list(map_object)
+print(second_list)
+```
+
+```
+[2, 3, 4, 5]
+[]
+```
+
+list를 만드는데 사용해도 더이상 사용할 수 없다.
+
+`map`이나 `filter`도 마찬가지다.
+
+한번 쓰면 사라지는 일회용이라고 생각해야한다.
