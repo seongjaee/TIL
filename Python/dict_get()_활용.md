@@ -21,12 +21,8 @@ print(my_dicy['D'])  # 에러 발생
 ```
 
 ```
----------------------------------------------------------------------------
-KeyError                                  Traceback (most recent call last)
-C:\Users\SEONGJ~1\AppData\Local\Temp/ipykernel_7084/1897060321.py in <module>
-      1 my_dict = {'A': '사과', 'B': '바나나', 'C': '체리'}
-      2 
-----> 3 print(my_dict['D'])
+-----------------------------------------------------------------
+KeyError Traceback (most recent call last)
 
 KeyError: 'D'
 ```
