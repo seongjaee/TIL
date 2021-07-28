@@ -1,7 +1,9 @@
 # 모듈 Module
 
-- 모듈 : 특정 **기능**을 파이썬 파일 단위로 작성한 것
-- 패키지 : 특정 기능과 관련된 여러 **모듈의 집합**
+> 파이썬의 모듈 : 파일 단위의 코드 재사용
+
+- 모듈 : 특정 **기능**을 `.py` 파일 단위로 작성한 것
+- 패키지 : 특정 기능과 관련된 여러 **모듈들의 집합**
 
 - 라이브러리 : 모듈과 패키지의 집합
 
@@ -42,11 +44,13 @@
 
 ## 모듈/패키지 활용
 
-- 패지키는 모듈/하위 패키지로 구조화
+### 패키지 Package
 
-  - package.module
+- 패키지는 점(`.`)으로 구분된 모듈 이름을 써서(`package.module`) 모듈을 구조화하는 방법
 
 - 모든 폴더에는 `__init__.py`를 만들어 패키지로 인식
+
+  - Python 3.3 이후부터는 없어도 되기는 하는데, 하위 파이썬이나 프레임 워크를 고려해 넣는게 좋음
 
 - 구조
 
@@ -68,11 +72,14 @@
 
 
 
-
-
 - 모듈 사용법
-  - `import module`
-  - `from import var, function, Class`
-  - `from module import *`
-  - `from package import module`
-  - `from package.module import var, function, Class`
+
+  - 모듈 임포트
+    - `import module`
+    - `from import var, function, Class`
+    - `from module import *`
+    - `from package import module`
+    - `from package.module import var, function, Class`
+
+  - `dir(<module>)` 로 모듈 내 요소를 확인 할 수 있음.
+
