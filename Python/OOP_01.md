@@ -149,17 +149,21 @@ my_rect.circumference()  # 260
 - 메서드 호출 : `my_instace.my_method()`
 - 속성 : `my_instance.my_attribute`
 
-
-
-> 클래스의 `type`은 `type`
->
->  `type`은 모든 클래스의 클래스
-
-
-
 - 클래스를 정의하고, 인스턴스들을 만들어 활용한다.
   - 클래스 : 객체들의 분류
   - 인스턴스 : 하나하나의 실체들
+
+
+
+### 클래스(Class)
+
+- 공통된 속성과 행위를 정의한 것.
+
+
+
+### 인스턴스(Instance)
+
+- 특정 class로부터 생성된 클래스의 실체
 
 
 
@@ -178,10 +182,8 @@ my_rect.circumference()  # 260
 ### self
 
 - 인스턴스 자기자신
-- 인스턴스 메서드는 호출 시 첫번째 인자로 인스턴스 자신이 전달됨
-  - 정의 시에, 매개변수 이름에 self를 첫번째 인자로 정의해야함
-
-
+- 인스턴스 메서드는 호출 시 첫번째 인자로 인스턴스 자신이 전달됨.
+  - 정의 시에, 첫번째 인자의 이름을 `self`로 정의해야함, 딴 거로 해도 작동은 됨.
 
 
 
@@ -194,16 +196,14 @@ my_rect.circumference()  # 260
       def __init__(self):
           print('인스턴스 생성 완료')
           
-          
   my_instance = Myclass()
   # 인스턴스 생성 완료
   ```
-
+  
   ```python
   class MyClass:
       def __init__(self, name):
           print(f'인스턴스 생성 완료. {name}.')
-          
           
   my_instance = MyClass('Hello')
   # 인스턴스 생성 완료. Hello.
@@ -222,7 +222,6 @@ my_rect.circumference()  # 260
       def __del__(self):
           print('인스턴스가 삭제됩니다.')
           
-       
   my_instance = MyClass()
   # 인스턴스 생성 완료
   del my_instance
@@ -238,3 +237,4 @@ my_rect.circumference()  # 260
 - 예시
   - `__str__(self)` : 해당 객체의 출력 형태 지정
   -  `__lt__(self, other)` : 부등호 연산자 (<, less than)
+
