@@ -120,14 +120,14 @@ class Rectangle:
     def area(self):
         return self.width * self.height
     
-   	def circumference(self):
+   	def perimeter(self):
         return 2 * (self.width + self.height)
 ```
 
 ```python
 my_rect = Rectangle(30, 100)
 my_rect.area()  # 3000
-my_rect.circumference()  # 260
+my_rect.perimeter()  # 260
 ```
 
 
