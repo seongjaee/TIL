@@ -177,7 +177,7 @@ Object Oriented Programming
 
 
 
-## 상속
+## 상속, Inheritance
 
 - 클래스는 상속이 가능
 - 상속을 통해 객체 간의 관계 구축
@@ -185,7 +185,9 @@ Object Oriented Programming
 
 
 
-- `issubclass`, `isinstance`
+- `issubclass(class, classinfo)` : class 가 classinfo의 subclass면 True
+
+-  `isinstance(object, classinfo)` : object가 classinfo의 인스턴스거나 subclass면 True
 
 - `super()` : 자식클래스에서 부모클래스를 사용하고 싶은 경우 사용
 
@@ -202,6 +204,13 @@ Object Oriented Programming
           # Person 클래스
           super().__init__(name, age, number)
           self.student_id = student_id
+          
+  
+  s1 = Student('성재', 26, '01099998888', '10538')
+          
+  issubclass(Student, Person)  # True
+  isinstance(s1, Student)  # True
+  isinstance(s1, Person)  # True
   ```
 
   
@@ -218,6 +227,39 @@ Object Oriented Programming
 
 - 인스턴스 -> 자식 클래스 -> 부모 클래스 순으로 탐색
 
+- 메서드 내부에서
+
+  - `self.attr`에서 `attr`클래스 이름공간 탐색 규칙을 따른다.
+  - `var`는 함수 내부의 이름 공간 탐색 규칙을 따른다.
+
+- 예시
+
+  ```python
+  title = '제목'
+  greeting = 'Hi'
+  
+  class Parent:
+      title = '부모'
+      greeting = '안녕하세요'
+      
+      def __init__(self, name):
+          self.name = name
+          print(title)   # -> global 변수 접근
+          print(self.greeting)  # -> 클래수 변수 접근
+          
+  class Child(Parent):
+      pass
+  
+  p1 = Parent('John')
+  ```
+
+  ```python
+  제목
+  안녕하세요
+  ```
+
+  `__init__`함수도 함수니까 `title` 이 함수 내부에 없으면 global로 탐색하러감.
+
 
 
 ### 다중 상속
@@ -226,7 +268,3 @@ Object Oriented Programming
 
   - 상속 받은 모든 클래스의 요소를 활용 가능
   - 중복된 속성이나 메서드가 있으면 상속 순서에 의해 결정
-
-  
-
-  
