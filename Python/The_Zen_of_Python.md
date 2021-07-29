@@ -67,3 +67,23 @@ Tim Peters의 파이썬 디자인 지침 가이드
 >There are only two hard things in Computer Science: cache invalidation and naming things. -- Phil Karlton
 
 - cache invalidation은 아직 모르겠는데, 이름은 잘 짓기 어렵다. 잘 짓자.
+
+
+
+
+
+> DRY, "Don't repeat yourself"
+>
+> [중복배제](https://ko.wikipedia.org/wiki/%EC%A4%91%EB%B3%B5%EB%B0%B0%EC%A0%9C)
+
+
+
+> KISS, 
+>
+> "Keep it small and simple", 
+>
+> "Keep it short and simple",
+>
+> "Keep it simple, stupid"
+>
+> 오컴의 면도날
