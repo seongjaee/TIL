@@ -98,7 +98,7 @@ Hyper Text Markup Language
     - article : 독립적으로 구분되는 영역
     - footer : 문서 전체 또는 섹션 푸터
   - 의미 있는 정보의 그룹을 태그로 표현
-  - 구역을 나누는 것뿐만아니라 의미를 가지는 태그를 활용하기 위한노력
+  - 구역을 나누는 것 뿐만 아니라 의미를 가지는 태그를 활용하기 위한노력
   - Non semantic 요소는 div, span 등
   - 요소의 의미가 명확해지기때문에 가독성 상승, 유지보수 좋아짐
   - 검색엔진 최적화를 위해 마크업을 효과적으로 할 필요
@@ -116,11 +116,11 @@ Hyper Text Markup Language
   - 블록 : 자리 다 차지
   - 인라인 : 요소 만큼만 자리 차지
 - 그룹 컨텐츠
-  - `<p>`
-  - `<hr>`
-  - `<ol>`, `<ul>`
-  - `<pre>`, `<blockquote>`
-  - `<div>`
+  - `<p>` : 하나의 문단
+  - `<hr>` : 문단 레벨 요소에서 주제의 분리
+  - `<ol>`, `<ul>` :  ol : 정렬된 목록, ul : 정렬되지 않은 목록
+  - `<pre>`, `<blockquote>` : pre : 미리 서식을 지정한 텍스트, blockquote : 긴 인용문, 들여쓰기 한 것으로 표현됨
+  - `<div>` : 플로우 컨텐츠를 위한 통용 컨테이너, css로 꾸미기 전에는 레이아웃이나 컨텐츠에 영향 x
 - 텍스트 관련 요소
   - `<a>` : 링크
   - `<b>` vs. `<strong>` : 글씨 두껍게
@@ -141,9 +141,8 @@ Hyper Text Markup Language
     - method : 어떤 http method
 - input
   - 다양한 타입을 가지는 입력 데이터 필드
-  - `<label>` : 서식 입력 요소 캡션
+  - `<label>` : 서식 입력 요소 캡션, 사용자에게 텍스트 표시, 화면리더기가 읽어주는 등 기능
   - `<input>` 공통 속성
-    - 
-- input 유형
-  - input 요소의 동작은 type에 따라 달라짐
-  - [input type MDN](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)
+  - input 유형
+    - input 요소의 동작은 type에 따라 달라짐
+    - [input type MDN](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)

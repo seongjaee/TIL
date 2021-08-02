@@ -10,14 +10,14 @@ Cascading Style Sheets
   - CSS구문은 선택자(selector)로 시작
   - 선택자로 스타일을 지정할 HTML 요소 선택
   - 중괄호 안에 속성(property), 값(value) 쌍으로 이루어진 선언(declaration)
-    - 속성 : 어떤 스타일 기능
+    - 속성 : 어떤 스타일 기능을 변경할지
     - 값 : 어떻게 스타일 기능을 설정할지
 - CSS 정의 방법
   - 인라인
     - HTML 태그 안에 직접 style 속성 활용
   - 내부 참조
     - head 태그 내에 `<style>` 에 지정
-  - 외부 참조
+  - 외부 참조 (대부분 사용)
     - 외부 CSS 파일을 `<head>` 내 `<link>`를 통해 불러옴
 
 ### CSS Selectors
@@ -37,9 +37,9 @@ Cascading Style Sheets
   - 링크, 동적
   - 구조적
 
-- 전체 선택자 : `.`
+- 전체 선택자 : `*`
 
-- 요소 선택자 : `h2` 등 
+- 요소 선택자 : `h2` , `h2, h3`
 
   - HTML 태그 직접 선택
 
@@ -50,7 +50,7 @@ Cascading Style Sheets
 - id 선택자 : `#(id)` 
 
   - 해당 클래스가 적용된 모든 항목에 적용되지만,
-  - 일반적으로 하나 문서에 1개만
+  - 일반적으로 하나 문서에 1개만(Unique)
 
 - 자식 결합자 : `(부모) > (자식)` 
 
@@ -62,7 +62,7 @@ Cascading Style Sheets
 
 - CSS 적용 우선 순위(cascading order)
 
-  1. 중요도 - 주의
+  1. 중요도 - 주의, 사용 거의 안함
      - `!Important` 를 붙이면 순위가 가장 높음
 
   2. 우선 순위
@@ -120,7 +120,7 @@ Cascading Style Sheets
   - 목록 꾸미기
   - 표 꾸미기
 
-### CSS Selectors + a
+### CSS Selectors +
 
 #### 결합자(Combinators)
 
@@ -143,11 +143,12 @@ Cascading Style Sheets
 
   - Margin
     - 테두리 바깥의 외부 여백
+    - 배경색 지정 x
   - Border
     - 테두리 영역
   - Padding
     - 테두리 안쪽 내부 여백
-    - content~border까지
+    - content ~ border 사이
   - Content
     - 요소 실제 내용
   - margin/padding 지정에서 방향 생략 시 shorthand
@@ -175,30 +176,30 @@ Cascading Style Sheets
 
 HTML 요소들을 어떻게 보여줄지 결정하는 속성
 
-- 인라인 / 블럭 요소
-  - `display: block` : 욕심쟁이
-    - 줄 바꿈이 일어나는 요소
-    - 블로 욕소 안에 인라인 레벨 요소가 들어갈 수 있음
-    - 컨텐츠의 크기에 상관없이 화면 크기 전체 가로 폭 다 차지
-  - `display: inline` : 소심쟁이
-    - 줄바꿈이 일어나지 않는 요소
-    - 컨텐츠 크기만큼만 가로 폭 차지
-    - width, height, margin-top, margin-bottom 지정 x
-    - line-height로 상하 여백 지정
+- `display: block` : 욕심쟁이
+  - 줄 바꿈이 일어나는 요소
+  - 화면 크기 전체 가로 폭 전부 차지
+  - 블록 요소 안에 인라인 레벨 요소가 들어갈 수 있음
+- `display: inline` : 소심쟁이
+  - 줄 바꿈이 일어나지 않는 요소
+  - 컨텐츠 너비만큼만 가로 폭 차지
+  - width, height, margin-top, margin-bottom 지정 x
+  - line-height로 상하 여백 지정
 
-- 블록 레벨 요소
-  - `<div>` / `<ul>` `<ol>` `<li>` / `<p>` / `<hr>` / `<form>`등
-- 인라인 레벨 요소
-  - `<span>` / `<a>` / `<img>` / `<input>` `<label>` / `<b>` `<em>` `<i>` `<strong>` 등
-
+- [블록 레벨 요소](https://developer.mozilla.org/ko/docs/Web/HTML/Block-level_elements)
+  - `<div>` / `<ul>`, `<ol>` ,`<li>` / `<p>` / `<hr>` / `<form>`등
+- [인라인 레벨 요소](https://developer.mozilla.org/ko/docs/Web/HTML/Inline_elements)
+  - `<span>` / `<a>` / `<img>` / `<input>` ,`<label>` / `<b>` ,`<em>` ,`<i>`, `<strong>` 등
 - 속성에 따른 수평 정렬
   - block : `margin-right: auto;` = inline: `text-align: left;`
 - `display: inline-block`
   - block 과 inline 레벨 요소 모두 갖음
-
+  - inline처럼 한 줄 표시 가능
+  - block 처럼 width, height, margin 속성 지정 가능
 - `display: none`
   - 해당 요소를 화면에 표시하지 않음. 공간조차 없어짐
   - `visibility: hidden` : 공간은 차지하나 화면에 보이지는 않음
+- 다양한 display 속성- [MDN CSS display](https://developer.mozilla.org/ko/docs/Web/CSS/display)
 
 ### CSS Position
 
