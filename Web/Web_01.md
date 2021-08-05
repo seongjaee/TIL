@@ -146,3 +146,4 @@ Hyper Text Markup Language
   - input 유형
     - input 요소의 동작은 type에 따라 달라짐
     - [input type MDN](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)
+

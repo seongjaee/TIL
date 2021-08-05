@@ -157,6 +157,11 @@
 - Bootstrap Grid System은 flexbox로 제작됨
 - container > rows > column으로 컨텐츠 배치, 정렬
 - 12개 column, 6개 grid breakpoints
+- container
+  - grid system의 기본 블록
+  - pd, mg 에 대한 스타일 값만 갖고 있음
+  - container의 최대 크기가 정해져 있음
+  - container-fluid : 화면 전체를 container로 지정
 - row
   - column들의 wrapper
 - gutters
@@ -167,6 +172,7 @@
   - 예시
     - `col-sm-1` : sm 사이즈에서는 이 col은 1칸 차지함
     - `col-md-3` : md 사이즈에서는 3칸 차지함
+  - 보통 브라우저는 md, 태블릿이 sm, 모바일이 xs로 생각.
 - col
   - row 당 12개 column
   - 너비는 부모 요소 기준으로 크기가 조정됨
@@ -174,5 +180,10 @@
   - column만이 row의 바로 하위 자식
 - offset
   - 지정한 만큼 col을 무시하고 다음 공간부터 적용
+  - 앞을 비운다
 - nesting
   - row > col > row > col 중첩
+- d-none, d-block
+  - 브레이크 포인트마다 보이게할지 안보이게 할지 설정
+- 주의
+  - grid와 d-flex를 동시에 쓰려고 하면 충돌남
