@@ -15,7 +15,10 @@
 - one source multi use
   - 반응형 웹 디자인
 - NETFLIX, VOGUE 사이트가 Bootstrap으로 작성됨.
-- - 
+
+
+
+<br/>
 
 ### Bootstrap 사용
 
@@ -33,9 +36,11 @@
 
   등 필요한 스타일을 검색해서 찾아 HTML class태그에 추가한다.
 
-
+<br/>
 
 ### Grid System
+
+[https://getbootstrap.com/docs/5.1/layout/grid/](https://getbootstrap.com/docs/5.1/layout/grid/)
 
 - Responsive Web Design, 반응형 웹 디자인 
   - 모바일 기기와 같은 다양한 화면 크기를 가진 디바이스들이 등장했다.
@@ -64,6 +69,7 @@
 
 - #### breakpoints
 
+  - min-width media query를 기반으로 만들어짐.
   - 다양한 디바이스에 적용하기 위해 특정 px조건에 대한 지점을 정해둠, 이게 breakpoints
   - xs, sm, md, lg, xl, xxl 6개
   - viewport의 너비가 px 단위이므로 breakpoint에도 px 사용
