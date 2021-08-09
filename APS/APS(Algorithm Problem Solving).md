@@ -61,7 +61,7 @@ ex) `numbers = [0, 1, 2, 3, 4, 5]`
 대표적인 정렬 방식
 
 - [버블 정렬](./Bubble_sort.md)
-- [카운팅 정렬](./Counting sort.md)
+- [카운팅 정렬](./Counting_sort.md)
 - 선택 정렬
 - 퀵 정렬
 - 삽입 정렬
