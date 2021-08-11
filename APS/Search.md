@@ -90,7 +90,7 @@ def binary_search(arr, key):
     while start <= end:
         mid = (start + end) // 2
         if arr[mid] == key:
-            return True
+            return mid
         elif arr[mid] > key:
             end = mid - 1
         else:
