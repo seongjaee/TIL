@@ -5,9 +5,9 @@
   - 리스트 가운데서 하나의 원소를 고름, 이것을 `피벗(pivot)`이라고 함.
   - 피벗을 기준으로 앞 쪽에는 작은 원소들만, 뒤 쪽에는 큰 원소들만 오도록 함.
   - 피벗을 기준으로 나누어진 두 개의 리스트(피벗보다 작은 원소들 리스트, 큰 원소들 리스트)에 대해 재귀적으로 반복.
-
-- 최악의 경우 : O(N^2)
-- 평균적으로 : O(NlogN)
+- 평균 시간 복잡도 : O(NlogN)
+- 최악 시간 복잡도 : O(N^2)
+- 평균적으로는 가장 빠름. (그래서 퀵 정렬인가봄.)
 - O(logN)만큼의 메모리가 필요함.
 - 같은 값들이 정렬 이후 순서가 달라지는 불안정 정렬.
 
@@ -65,7 +65,7 @@ def quick_sort(arr):
 
 배열 내부에서 분할 작업으로 메모리를 개선할 수 있다.
 
-[https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC#%ED%8C%8C%EC%9D%B4%EC%8D%AC](https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC#%ED%8C%8C%EC%9D%B4%EC%8D%AC)
+[https://ko.wikipedia.org/wiki/퀵_정렬#파이썬](https://ko.wikipedia.org/wiki/%ED%80%B5_%EC%A0%95%EB%A0%AC#%ED%8C%8C%EC%9D%B4%EC%8D%AC) 참고함.
 
 ```python
 # 피벗을 기준을 내부에서 분할
