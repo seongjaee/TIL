@@ -33,7 +33,7 @@ def quick_sort(arr):
         else:
             equal.append(x)
             
-    return quicksort(less) + equal + quicksort(more)
+    return quick_sort(less) + equal + quick_sort(more)
 ```
 
 ```python
@@ -50,7 +50,7 @@ def quick_sort(arr):
     more = [x for x in new_arr if x > pivot]
     equal = [x for x in new_arr if x == pivot]
             
-    return quicksort(less) + equal + quicksort(more)
+    return quick_sort(less) + equal + quick_sort(more)
 ```
 
 
@@ -99,5 +99,12 @@ def partition(arr, start, end):
     
     # 피벗의 인덱스를 반환
     return right
+
+def quick_sort(arr, start, end):
+    if start < end:
+        pivot = partition(arr, start, end)
+        quick_sort(arr, start, pivot - 1)
+        quick_sort(arr, pivot + 1, end)
+    return arr
 ```
 
