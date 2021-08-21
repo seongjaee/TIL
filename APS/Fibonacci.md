@@ -130,5 +130,5 @@ def fibo(n):
 
 ![image04](Fibonacci.assets/image04.png)
 
-- 위의 식을 이용해서 행렬 곱셈으로 피보나치 수를 구할 수 있다. 특히 [분할 정복을 이용한 거듭제곱](....../algorithm-study/blob/main/Codes/Divide_n_conquer/power.md#행렬-제곱)을 하면 빠르게 구할 수 있다.
+- 위의 식을 이용해서 행렬 곱셈으로 피보나치 수를 구할 수 있다. 특히 [분할 정복을 이용한 거듭제곱](https://github.com/seongjaee/algorithm-study/blob/main/Codes/Divide_n_conquer/power.md#행렬-제곱)을 하면 빠르게 구할 수 있다.
 
