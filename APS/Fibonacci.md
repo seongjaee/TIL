@@ -86,3 +86,49 @@ def fibo_dp(n):
 
 - 메모이제이션을 재귀적 구조보다 반복적 구조로 DP를 구현하는게 효율적.
 
+## 3. 반복문 풀이
+
+- 저장없이 피보나치 수 하나만을 구할 때는 반복문을 이용할 수 도 있다.
+- 파이썬에서는 튜플을 이용해 스왑을 간단히 할 수 있다.
+
+```python
+def fibo(n):
+    if n < 2:
+        return n
+    
+    f0, f1 = 0, 1
+    for i in range(n-1):
+        f1, f0 = f0 + f1, f1
+        
+    return f1
+```
+
+
+
+## 4. 행렬 곱셈
+
+- 위의 방법들은 n이 커질수록 메모리와 시간이 많이 필요해진다.
+- n이 큰 경우 행렬 곱셈과 분할 정복을 통해 해결할 수 있다.
+
+### 피보나치 행렬식
+
+- 피보나치 수열을 이용해서 다음과 같은 행렬식을 만들 수 있다.
+
+![image01](Fibonacci.assets/image01.png)
+
+- 더 나아가 2x2 행렬로 만들면
+
+![image02](Fibonacci.assets/image02.png)
+
+​	까지 만들 수 있다.
+
+- 따라서 귀납적으로 다음과 같다.
+
+![image03](Fibonacci.assets/image03.png)
+
+- 그런데 F2 = F1 = 1, F0 = 0 이므로 최종적으로 다음 식을 얻을 수 있다.
+
+![image04](Fibonacci.assets/image04.png)
+
+- 위의 식을 이용해서 행렬 곱셈으로 피보나치 수를 구할 수 있다. 특히 [분할 정복을 이용한 거듭제곱](....../algorithm-study/blob/main/Codes/Divide_n_conquer/power.md#행렬-제곱)을 하면 빠르게 구할 수 있다.
+
