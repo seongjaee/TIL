@@ -42,44 +42,34 @@
 
 ```python
 def postfix_notation(formula):
+    isp = {'*': 2, '+': 1, '(': 0}
+    icp = {'*': 2, '+': 1, '(': 3}
+
     stack = []
-    result = ''
+    postfix_notation = []
+
     for token in formula:
-        if token in token_rank:
-            # 닫는 괄호가 아니면 stack이 비거나
-            # stack의 top보다 우선순위가 높아질 때까지 pop
-            if token != ')':
-                while stack and stack_rank[stack[-1]] >= token_rank[token]:
-                    temp = stack.pop()
-
-                    # 괄호면 추가하지 않아도 됨
-                    if temp != '(' and temp != ')':
-                        result += temp
-
-                # stack에 push
-                stack.append(token)
-
-            else:
-                # 닫는 괄호 일 때는 
-                # 열린 괄호가 나올 때까지 pop
-                while stack:
+        if token.isdigit():  # 숫자면 출력
+            postfix_notation.append(token)
+        else:
+            if token == ')':  # 닫힌 괄호면 열린 괄호가 나올 때까지 pop
+                while True:
                     temp = stack.pop()
                     if temp == '(':
                         break
+                    postfix_notation.append(temp)
 
-                    result += temp
+            else:
+                # 연산자면 우선순위가 높거나 스택이 빌 때까지 pop 하고 push
+                while stack and isp[stack[-1]] >= icp[token]:
+                    postfix_notation.append(stack.pop())
+                stack.append(token)
 
-        # 피연산자면 result에 추가
-        else:
-            result += token
-
-    # stack에 남은 것들 result에 추가
+    # 남은 것들 pop해서 출력
     while stack:
-        temp = stack.pop()
-        if temp != '(' and temp != ')':
-            result += temp
+        postfix_notation.append(stack.pop())
 
-    return result
+    return postfix_notation
 ```
 
 
@@ -141,11 +131,15 @@ def calculate_formula(formula):
     # 후위 표기법 계산하기
     stack = []
     for token in formula:
-        # 연산자면 stack에서 두 개를 꺼내서 연산 후
-        # 다시 stack에 push
-        if token in operator:
-            a = int(stack.pop())
-            b = int(stack.pop())
+        
+        if token.isdigit():
+            # 숫자면 스택에 push
+            stack.append(int(token))
+        else:
+            # 연산자면 stack에서 두 개를 꺼내서 연산 후
+        	# 다시 stack에 push
+            a = stack.pop()
+            b = stack.pop()
             if token == '+':
                 stack.append(b + a)
             elif token == '*':
@@ -154,11 +148,7 @@ def calculate_formula(formula):
                 stack.append(b - a)
             elif token == '/':
                 stack.append(b // a)  # /가 몫을 계산하는 경우
-
-        # 피연산자면 stack에 push
-        else:
-            stack.append(token)
-
+            
     # 최종 결과
     return stack.pop()
 ```
