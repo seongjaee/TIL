@@ -46,7 +46,11 @@
   - `require_http_methods()`, `require_POST()`, `require_safe()`
 
 - `require_http_methods()`
-  - GET, POST 요청만 가능
+  - `@require_http_methods(['GET', 'POST'])`
+  - 리스트 안의 요청들만 가능
 
 - `require_POST()`
   - POST 요청만 가능
+- `require_safe()`
+  - `require_GET()`  대신 사용
+  - GET, HEAD 요청만 가능
