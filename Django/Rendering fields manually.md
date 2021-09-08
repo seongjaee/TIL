@@ -1,6 +1,7 @@
 # Rendering fields manually
 
 - Form을 직접 작성하기
+- Template은 UI를 결정짓는 것이다. 그런데 UI를 조작하기 위해 forms.py 를 수정하는 건 맥락에 어울리지 않는다. Template에서 Form을 직접 작성하자.
 
 - [django-docs #rendering-fields-manually](https://docs.djangoproject.com/en/3.2/topics/forms/#rendering-fields-manually)
 
