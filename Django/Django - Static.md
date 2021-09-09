@@ -155,3 +155,10 @@
 - 이미지가 업로드 될 때 resizing
 - [django-imagekit](https://github.com/matthewwithanm/django-imagekit) 라이브러리 활용
 
+- 원래 이미지를 변경해서 저장하고자 한다면 mageSpecField로 저장
+
+- `imagekit.processor`
+  - Thumbnail : 썸네일. 작은 사진으로 바꾼다.
+  - ResizeToFill : 원하는 사이즈와 비율로 자른다.
+  - ResizeToFit : 원본 비율로 확대/축소해서 원하는 사이즈에 맞추려고 한다.
+
