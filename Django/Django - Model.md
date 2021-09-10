@@ -75,7 +75,12 @@
 - `CharField(max_length=None, **options)`
 
   - 길이의 제한이 있는 문자열
+
   - max_length는 유효성 검사에서 활용
+
+  - `choices` 옵션을 통해서 form에서 선택하는 드롭박스 만들 수 있음.
+
+    `instance.get_<field>_display` 로 접근 가능
 
 - `TextField(**option)`
 
