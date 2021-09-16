@@ -46,10 +46,25 @@
 
 
 
-- `get_users()`
+- `get_user()`
+  
   - `AuthenticationForm`의 인스턴스 메서드
+  
   - 인스턴스 생성 시 `user_cache`는 None으로 할당되며 유효성 검사 통과 시 로그인 한 사용자 객체로 할당
+  
   - 인스턴스의 유효성을 확인한 후 user를 제공하려는 구조
+  
+  - `form.is_valid()` 를 호출하면 내부적으로 `clean()` 함수를 호출,
+  
+    `clean()` 함수 안에는 `authenticate()` 함수가 호출,
+  
+    `authenticate()` 함수는 id와 pw가 맞는 유저가 없으면 None, 있으면 user 객체 반환함.
+  
+    `user_cache` 가 `authenticate()`의 결과값을 저장하게 되고, 그걸 `get_user()`가 반환함.
+  
+    
+  
+- settings.py 에 `AUTH_USER_MODEL`이 프로젝트의 유저 모델을 지정함
 
 
 
