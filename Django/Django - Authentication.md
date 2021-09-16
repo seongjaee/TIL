@@ -8,6 +8,7 @@
   -  `django.contrib.contenttypes` : 사용자가 생성한 모델과 권한 연결
 - Django 인증 시스템은 인증(Authentication)과 권한(Authorization) 부여 제공
 - auth와 관련된 django 앱은 `accounts`로 짓는 것이 관례
+  - `accounts`로 지어야 사용하기 편한 기능들이 있음
 
 
 
