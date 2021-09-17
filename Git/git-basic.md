@@ -24,8 +24,6 @@
 
 ## How
 
-
-
 ### git 기본 명령어
 
 `$ git init` : git 로컬 저장소 생성
@@ -41,8 +39,6 @@
 `$ git remote add origin <URL>  ` : 리모트 저장소와 연결
 
 `$ git status` : git 현재 상태 확인
-
-
 
 
 
