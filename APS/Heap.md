@@ -56,3 +56,84 @@
 - 따라서 힙은 제한적인 상황에서 사용할 수 있다.
 - **삽입과 삭제가 빈번한 자료 구조의 최대 또는 최소 값을 접근해야할 때** 사용하면 좋다.
 
+
+
+
+
+## 최소 힙 구현
+
+```python
+class MinHeap:
+    def __init__(self):
+        self.heap = []
+
+    def __str__(self):
+        return ' '.join(map(str, self.heap))
+
+    def Add(self, data):
+        # 마지막 인덱스
+        i = len(self.heap)
+        # 값 추가
+        self.heap.append(data)
+
+        while i > 0:
+            parent = (i - 1) // 2
+            # 부모보다 크거나 같으면 break
+            if self.heap[parent] <= self.heap[i]:
+                break
+            # 더 작으면 스왑
+            else:
+                self.heap[parent], self.heap[i] = self.heap[i], self.heap[parent]
+                i = parent
+
+    def Pop(self):
+        # 비어있으면 에러 반환
+        if not self.heap:
+            raise IndexError('pop form empty heap')
+            
+        # 반환할 루트 노드
+        root = self.heap[0]
+        # 마지막 원소를 루트 노드로 하고 마지막 원소 제거
+        self.heap[0] = self.heap[-1]
+        self.heap.pop()
+
+        i = 0
+        last = len(self.heap) - 1
+        while i < last:
+            child = 2*i + 1
+            # 오른쪽이 더 작으면 오른쪽 이용
+            if child < last and self.heap[child] > self.heap[child + 1]:
+                child += 1
+
+            # 부모가 더 작거나 같으면 break
+            if child > last or self.heap[i] <= self.heap[child]:
+                break
+
+            # 스왑
+            self.heap[i], self.heap[child] = self.heap[child], self.heap[i]
+            i = child
+                
+        return root
+
+
+my_heap = MinHeap()
+
+data = [3,7,5,6,1,2,4]
+
+for d in data:
+    my_heap.Add(d)
+
+for i in range(7):
+    print(my_heap.Pop())
+    
+"""
+1
+2
+3
+4
+5
+6
+7
+"""
+```
+
