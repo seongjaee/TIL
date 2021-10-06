@@ -35,7 +35,7 @@
 
 - RDBMS
 
-  - 관계형 데이터 관리 시스템, Reltional Database Management System
+  - 관계형 데이터 관리 시스템, Relational Database Management System
   - MySQL, SQLite, PostgreSQL, ORACLE, MS SQL 등
 
 
