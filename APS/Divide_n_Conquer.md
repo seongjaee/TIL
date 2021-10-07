@@ -100,19 +100,20 @@
   		quickSort(A[], s+1, r)
   ```
 
-- Hoare-Partition 알고리즘
 
-  ```
-  partition(A[], l, r)
-  	p = A[l]  // p : 피봇 값
-  	i = l, j = r
-  	WHILE i <= j
-  		WHILE i <= j and A[i] <= p : i++
-  		WHILE i <= j and A[j] >= p : j--
-  		IF i < j : swap(A[i], A[j])
-  	swap(A[l], A[j])
-  	RETURN j
-  ```
+### Hoare-Partition 알고리즘
+
+```
+partition(A[], l, r)
+	p = A[l]  // p : 피봇 값
+	i = l, j = r
+	WHILE i <= j
+		WHILE i <= j and A[i] <= p : i++
+		WHILE i <= j and A[j] >= p : j--
+		IF i < j : swap(A[i], A[j])
+	swap(A[l], A[j])
+	RETURN j
+```
 
 - 아이디어
 
@@ -130,20 +131,23 @@
 
   - 따라서 j와 피봇의 위치를 바꾸면서 경계에 피봇이 위치하도록함.
 
-- Lomuto partition 알고리즘
+  
 
-  ```
-  partition(A[],p, r)
-  	x = A[r]
-  	i = p - 1
-  	
-  	FOR j in p -> r-1
-  		IF A[j] <= x
-  			i++, swap(A[i], A[j])
-      
-      swap(A[i+1], A[r])
-      RETURN i + 1
-  ```
+
+### Lomuto partition 알고리즘
+
+```
+partition(A[],p, r)
+	x = A[r]
+	i = p - 1
+	
+	FOR j in p -> r-1
+		IF A[j] <= x
+			i++, swap(A[i], A[j])
+    
+    swap(A[i+1], A[r])
+    RETURN i + 1
+```
 
 - 아이디어
 
