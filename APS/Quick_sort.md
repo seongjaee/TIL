@@ -109,3 +109,110 @@ def quick_sort(arr, start, end):
     return arr
 ```
 
+
+
+### Hoare-Partition 알고리즘
+
+```
+partition(A[], l, r)
+	p = A[l]  // p : 피봇 값
+	i = l, j = r
+	WHILE i <= j
+		WHILE i <= j and A[i] <= p : i++
+		WHILE i <= j and A[j] >= p : j--
+		IF i < j : swap(A[i], A[j])
+	swap(A[l], A[j])
+	RETURN j
+```
+
+- 아이디어
+
+  - 피봇 값들보다 큰 값은 오른쪽, 작은 값은 왼쪽에 위치하도록함
+
+  - 피봇을 두 집합의 가운데에 위치시킴.
+
+  - i는 왼쪽부터 시작해서 P보다 큰 값을 찾음.
+
+    j는 오른쪽부터 시작해서 P보다 작은 값을 찾음.
+
+  - 그 두 값의 위치를 바꿈.
+
+  - i와 j가 교차하게 되면, i와 j 사이가 피봇을 기준으로 하는 작은 값과 큰 값의 경계하는 뜻.
+
+  - 따라서 j와 피봇의 위치를 바꾸면서 경계에 피봇이 위치하도록함.
+
+![그림1](Quick_sort.assets/그림1.png)
+
+![그림2](Quick_sort.assets/그림2.png)
+
+![그림3](Quick_sort.assets/그림3.png)
+
+![그림4](Quick_sort.assets/그림4.png)
+
+![그림5](Quick_sort.assets/그림5.png)
+
+![그림6](Quick_sort.assets/그림6.png)
+
+![그림7](Quick_sort.assets/그림7.png)
+
+![그림8](Quick_sort.assets/그림8.png)
+
+![그림9](Quick_sort.assets/그림9.png)
+
+![그림10](Quick_sort.assets/그림10.png)
+
+
+
+### Lomuto partition 알고리즘
+
+```
+partition(A[],p, r)
+	x = A[r]
+	i = p - 1
+	
+	FOR j in p -> r-1
+		IF A[j] <= x
+			i++, swap(A[i], A[j])
+    
+    swap(A[i+1], A[r])
+    RETURN i + 1
+```
+
+- 아이디어
+
+  - i와 j 사이에 P보다 큰 원소가 위치하게 됨.
+
+  - i : 피봇보다 작은 원소중 가장 오른쪽을 가리킴.
+
+  - j를 하나씩 키워가면서 피봇보다 작은 원소가 나오게 되면 현재 i를 1키우고 
+
+    i와 j에 위치한 원소를 교환한다.
+
+![그림11](Quick_sort.assets/그림11.png)
+
+![그림12](Quick_sort.assets/그림12.png)
+
+![그림13](Quick_sort.assets/그림13.png)
+
+![그림14](Quick_sort.assets/그림14.png)
+
+![그림15](Quick_sort.assets/그림15.png)
+
+![그림16](Quick_sort.assets/그림16.png)
+
+![그림17](Quick_sort.assets/그림17.png)
+
+![그림18](Quick_sort.assets/그림18.png)
+
+![그림19](Quick_sort.assets/그림19.png)
+
+![그림20](Quick_sort.assets/그림20.png)
+
+![그림21](Quick_sort.assets/그림21.png)
+
+![그림22](Quick_sort.assets/그림22.png)
+
+![그림23](Quick_sort.assets/그림23.png)
+
+![그림24](Quick_sort.assets/그림24.png)
+
