@@ -1,6 +1,6 @@
-# DB 관계 1 : N
+# Model Relationship 1
 
-## Model Relationship
+## DB 1 : N 관계
 
 - RDBMS
 
