@@ -63,6 +63,13 @@
 
 - `number` 타입
   - 정수, 실수, Infinity(1/0 등), NaN(Not a Number)
+  
+- `Date` 객체
+
+  - `Date([parameters])` 로 객체 생성, 인자를 비워두면 오늘 날짜 시간으로 반영.
+  - `set` 으로 값 설정, `get` 으로 값 반환,
+  - `parse()` 로 날짜를 나태나는 문자열을 Date 객체로 반환.
+
 - `string` 타입
   - 템플릿 리터럴(Template Literal)
     - '' 대신`` ` 으로 문자열을 감싸고 `${}` 안에 변수
