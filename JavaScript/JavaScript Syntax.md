@@ -368,3 +368,49 @@ switch (operator) {
 
   
 
+## 08. Class
+
+- JavaScript는 클래스가 아니라 프로토타입 기반의 객체 지향 프로그래밍 언어다.
+
+- 편의를 위해 class를 사용할 수 있게 만들어져 있다.
+
+- ```javascript
+  class Car {
+      constructor(options) {
+          this.color = options.color
+      }
+      
+      drive() {
+          console.log('부릉부릉')
+      }
+  }
+  
+  const car = new Car({ color: 'yellow'})
+  ```
+
+- 상속
+
+  ```javascript
+  class Car {
+      constructor(options) {
+          this.title = options.title
+      }
+      
+      drive() {
+          console.log('부릉부릉')
+      }
+  }
+  
+  class PoliceCar extends Car {
+      constructor(options) {
+          super(options)
+      }
+      drive() {
+          super.drive()
+          console.log('삐용삐용')
+      }
+  }
+  ```
+
+  
+
