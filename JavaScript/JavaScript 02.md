@@ -198,15 +198,11 @@
 
 
 
-
-
 ## Axios
 
 - "Promise based HTTP client for the browser and Node.js"
 - 브라우저를 위한 Promise 기반의 클라이언트
 - AJAX 요청이 편리해짐
-
-
 
 
 
@@ -216,15 +212,3 @@
 - 기존 Promise 시스템 위에 구축된 syntactic sugar
   - Promise 구조의 then chaining을 제거
   - 비동기 코드를 조금 더 동기 코드 처럼 표현
-
-
-
-
-
-
-
-
-
-- 2007 iPhone 인터넷이 핸드폰으로도 가능해짐
-- 2008 자바스크립트 실행 속도가 빠른 크롬 등장
-- Adobe 사망
