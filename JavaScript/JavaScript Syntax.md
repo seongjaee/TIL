@@ -85,6 +85,15 @@
   - `true`
   - `false`
 
+- 암시적 형변환
+
+  - 0을 제외한 모든 숫자형 true, 0은 false
+  - null : false
+  - undefined : false
+  - 빈 문자열 : false,
+  - 비어있는 배열이나 객체도 true
+    - 비어있는 배열을 false로 만들고 싶다면? `[].length`
+
 - 연산자
 
   - `+`, `-`, `*`, `/`
