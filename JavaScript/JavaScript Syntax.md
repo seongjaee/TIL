@@ -423,3 +423,20 @@ switch (operator) {
 
   
 
+## 09. JSON
+
+- JavaScript Object Notation
+- `JSON.stringify()` : 객체를 문자열로 변환
+- `JSON.parse()` : JSON 문자열을 객체로 변환
+
+```javascript
+const data = [
+    {id: 1, content: 'Apple'},
+    {id: 2, content: 'Banana'},
+    {id: 3, content: 'Coconut'},    
+]
+const jsonString = JSON.stringify(data)
+
+const reData = JSON.parse(jsonString)
+```
+
