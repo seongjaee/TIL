@@ -155,6 +155,7 @@
   - computed 속성은 종속 대상을 따라 저장된다는 차이점
   - 종속된 대상이 변경되지 않는 한 함수를 다시 호출해도 계산하지 않고 이미 계산된 결과를 반환
   - 이에 비해 methods를 호출하면 렌더링을 다시 할 때마다 항상  함수를 실행
+  - computed는 getter, methods는 setter 같은 느낌
 
 ## Options/DOM - `'watch'`
 
@@ -171,7 +172,7 @@
     - 감시할 데이터를 지정하고 그 데이터가 바뀌면 특정 함수를 실행
     - 명령형 프로그래밍 방식
 
-## Options/DOM - `'filter'`
+## Options/Assets - `'filter'`
 
 - 텍스트 형식화를 적용할 수 있는 필터
 - interpoltaion 또는 v-bind 이용 시 사용 가능
