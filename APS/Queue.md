@@ -75,6 +75,59 @@
   - 초기 : front = rear = null
   - 공백 : front = rear = null
 
+```python
+# 단순 연결 리스트로 구현한 큐
+
+class Queue:
+    class _Node:
+        def __init__(self, data):
+            self.data = data
+            self.next = None
+
+    def __init__(self):
+        self.head = None
+        self.rear = None
+        self.size = 0
+
+    @property
+    def empty(self):
+        if self.size > 0:
+            return 0
+        return 1
+
+    @property
+    def front(self):
+        if self.size:
+            return self.head.data
+        return -1
+
+    @property
+    def back(self):
+        if self.size:
+            return self.rear.data
+        return -1
+
+    def push(self, X):
+        node = self._Node(X)
+        if self.empty:
+            self.head = node
+            self.rear = node
+        else:
+            self.rear.next = node
+            self.rear = node
+        self.size += 1
+
+    def pop(self):
+        if self.empty:
+            return -1
+        self.size -= 1
+        temp = self.head.data
+        self.head = self.head.next
+        return temp
+```
+
+
+
 ## 우선순위 큐
 
 - 우선순위를 가진 항목들을 저장하는 큐
