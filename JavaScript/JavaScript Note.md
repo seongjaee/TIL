@@ -53,3 +53,28 @@ console.log(arr);
 - 모바일에서 터치를 했을 때 이벤트가 두번씩 발생하는 상황이 발생.
 - 알고보니 모바일에서 터치했을 때, touch 이벤트뿐만 아니라 click 이벤트도 발생함.
 - touch 이벤트 리스너를 지우고 click 이벤트 리스너만 남겨서 해결!
+
+
+
+## Object.assign()
+
+- [https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+
+- 원본 객체의 모든 열거 가능한 자체 속성을 복사해 대상 객체에 붙여넣고 대상 객체 반환
+
+- ```javascript
+  const target = { a: 1, b: 2 };
+  const source = { b: 4, c: 5 };
+  
+  const returnedTarget = Object.assign(target, source);
+  
+  console.log(target);
+  // expected output: Object { a: 1, b: 4, c: 5 }
+  
+  console.log(returnedTarget);
+  // expected output: Object { a: 1, b: 4, c: 5 }
+  ```
+
+- 동일한 키를 갖는 속성은 덮어씀.
+
+- 속성 단순 복사나 새로 정의가 아니라 할당하는 것.
