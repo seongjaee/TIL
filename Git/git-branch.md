@@ -84,7 +84,7 @@
 - Manual Merge (CONFLICT)
   - 파일 변경 내용에서 충돌이 일어나는 경우
   - 충돌이 난 파일에 ! 표시, 비교를 위해 낙서도 해줌.
-  - VS Code에서는 Accept Current Chane, Accept Incoming Change 버튼 등도 제공해줌.
+  - VS Code에서는 Accept Current Change, Accept Incoming Change 버튼 등도 제공해줌.
   - 충돌 파일 수정 후 다시 add, commit 진행해야함
 
 <br>
