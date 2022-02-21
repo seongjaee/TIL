@@ -35,8 +35,6 @@
 
 테스트넷 : 메인넷에 아직 올라가기에 준비가 덜 됐을 때 가볍게 시험해볼 수 있는 네트워크
 
-![image-20220221103027475](C:\Users\multicampus\AppData\Roaming\Typora\typora-user-images\image-20220221103027475.png)
-
 각 네트워크 Id가 존재, Id에 맞게 거래하거나 트랜잭션 보냄.
 
 메인넷에서 거래되는 이더리움과 테스트넷에서 거래되는 그것과 큰 가치 차이.
