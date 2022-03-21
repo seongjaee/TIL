@@ -8,7 +8,7 @@ http://www.kocw.net/home/search/kemView.do?kemId=1046323
 
 | 강의 제목                                                    |       체크박스       |
 | ------------------------------------------------------------ | :------------------: |
-| [Introduction to Operating Systems](./01. Introduction to Operating Systems.md) |  :white_check_mark:  |
+| [Introduction to Operating Systems](./01.%20Introduction%20to%20Operating%20Systems.md) |  :white_check_mark:  |
 | System Structure & Program Execution 1                       | :white_large_square: |
 | System Structure & Program Execution 2                       | :white_large_square: |
 | Process 1                                                    | :white_large_square: |
