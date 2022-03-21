@@ -12,3 +12,5 @@
 
 - 충돌 없음.
 - `리모트 브랜치 B` 로 push 하더라도 A와 B가 아예 별개 브랜치가 되는건 아님. 브랜치는 단순히 포인터일 뿐임.
+
+![image](https://user-images.githubusercontent.com/81851585/159276067-e0789c05-3791-40e6-95a0-cc12b5a01652.png)
