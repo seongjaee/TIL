@@ -10,8 +10,8 @@ http://www.kocw.net/home/search/kemView.do?kemId=1046323
 | ------------------------------------------------------------ | :------------------: |
 | [Introduction to Operating Systems](./01.%20Introduction%20to%20Operating%20Systems.md) |  :white_check_mark:  |
 | [System Structure & Program Execution 1](02-1.%20System%20Structure%20&%20Program%20Execution%201) |  :white_check_mark:  |
-| System Structure & Program Execution 2                       | :white_large_square: |
-| Process 1                                                    | :white_large_square: |
+| [System Structure & Program Execution 2](02-2.%20System%20Structure%20&%20Program%20Execution%202) |  :white_check_mark:  |
+| [Process 1](03-1.%20Process%201)                             |  :white_check_mark:  |
 | Process 2                                                    | :white_large_square: |
 | Process 3                                                    | :white_large_square: |
 | Process Management 1                                         | :white_large_square: |
