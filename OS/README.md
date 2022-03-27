@@ -13,7 +13,7 @@ http://www.kocw.net/home/search/kemView.do?kemId=1046323
 | [System Structure & Program Execution 2](./02-2.%20System%20Structure%20%26%20Program%20Execution%202.md) |  :white_check_mark:  |
 | [Process 1](./03-1.%20Process%201.md)                        |  :white_check_mark:  |
 | [Process 2](./03-2.%20Process%202.md)                        |  :white_check_mark:  |
-| Process 3                                                    | :white_large_square: |
+| [Process 3](03-3.%20Process%203)                             |  :white_check_mark:  |
 | Process Management 1                                         | :white_large_square: |
 | Process Management 2                                         | :white_large_square: |
 | CPU Scheduling 1                                             | :white_large_square: |
