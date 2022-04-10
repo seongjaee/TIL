@@ -16,7 +16,7 @@ http://www.kocw.net/home/search/kemView.do?kemId=1046323
 | [Process 3](03-3.%20Process%203.md)                          |  :white_check_mark:  |
 | [Process Management 1](04-1.%20Process%20Management%201.md)  |  :white_check_mark:  |
 | [Process Management 2](04-2.%20Process%20Management%202.md)  |  :white_check_mark:  |
-| CPU Scheduling 1                                             | :white_large_square: |
+| [CPU Scheduling 1](05-1.%20CPU%20Scheduling%201.md)          |  :white_check_mark:  |
 | CPU Scheduling 2/ Process Synchronization 1                  | :white_large_square: |
 | Process Synchronization 1                                    | :white_large_square: |
 | Process Synchronization 2                                    | :white_large_square: |
