@@ -21,8 +21,8 @@ http://www.kocw.net/home/search/kemView.do?kemId=1046323
 | [Process Synchronization 1](06-1.%20Process%20Synchronization%201.md) |  :white_check_mark:  |
 | [Process Synchronization 2](06-2.%20Process%20Synchronization%202.md) |  :white_check_mark:  |
 | [Process Synchronization 3](06-3.%20Process%20Synchronization%203.md) |  :white_check_mark:  |
-| Process Synchronization 4(Concurrency Control)               | :white_large_square: |
-| Deadlocks 1                                                  | :white_large_square: |
+| [Process Synchronization 4(Concurrency Control)](06-4.%20Process%20Synchronization%204.md) |  :white_check_mark:  |
+| [Deadlocks 1](07-1.%20Deadlock%201.md)                       |  :white_check_mark:  |
 | Deadlocks 2                                                  | :white_large_square: |
 | Memory Management 1                                          | :white_large_square: |
 | Memory Management 2                                          | :white_large_square: |
