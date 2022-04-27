@@ -25,7 +25,7 @@ http://www.kocw.net/home/search/kemView.do?kemId=1046323
 | [Deadlocks 1](07-1.%20Deadlock%201.md)                       |  :white_check_mark:  |
 | [Deadlocks 2](07-2.%20Deadlock%202.md)                       |  :white_check_mark:  |
 | [Memory Management 1](08-1.%20Memory%20Management%201.md)    |  :white_check_mark:  |
-| Memory Management 2                                          | :white_large_square: |
+| [Memory Management 2](08-2.%20Memory%20Management%202.md)    |  :white_check_mark:  |
 | Memory Management 3                                          | :white_large_square: |
 | Memory Management 4                                          | :white_large_square: |
 
