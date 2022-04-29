@@ -1,10 +1,14 @@
 # **Next js에서 이미지 넣기**
 
-https://nextjs.org/docs/basic-features/image-optimization#local-images
+### 참고 문서
 
-https://birdmee.tistory.com/10
+- https://nextjs.org/docs/api-reference/next/image
 
-카카오 로그인 버튼 이미지 넣어보면서 정리해봤습니다.
+- https://nextjs.org/docs/basic-features/image-optimization#local-images
+
+- https://birdmee.tistory.com/10
+
+
 
 ### Usage
 
@@ -47,6 +51,30 @@ export default function KakaoLoginButton() {
   import Image from 'next/image'
   ```
 
+
+
+### src
+
+- src 속성은 다음 2가지 중 하나여야합니다.
+
+  1. 정적 임포트된 이미지 파일
+
+  2. 문자열 경로. 외부 절대 경로 URL 이거나, `loader` prop이나 `loader configuration` 에 의존한 내부 경로
+
+  외부 URL 사용하려면 도메인을 `next.config.js` 에 추가해야합니다.
+
+  ```javascript
+  module.exports = {
+    images: {
+      domains: ["aaa.bbb.com"],
+    },
+  }
+  ```
+
+  `https://`  없음에 주의해야합니다.
+
+
+
 ### **Local Image**
 
 - 이미지 파일을 그대로 import 합니다.
@@ -66,6 +94,7 @@ export default function KakaoLoginButton() {
 ### **Remote Image**
 
 - `src` 속성에 URL 문자열이 들어가는데, 상대 경로도 되고 절대 경로도 된다고 합니다.
+- 외부 URL을 사용할 때는 `next.config.js` 에 도메인 설정이 필요합니다.
 
 ## **Image Sizing**
 
