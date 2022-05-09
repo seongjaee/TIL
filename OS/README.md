@@ -26,6 +26,13 @@ http://www.kocw.net/home/search/kemView.do?kemId=1046323
 | [Deadlocks 2](07-2.%20Deadlock%202.md)                       |  :white_check_mark:  |
 | [Memory Management 1](08-1.%20Memory%20Management%201.md)    |  :white_check_mark:  |
 | [Memory Management 2](08-2.%20Memory%20Management%202.md)    |  :white_check_mark:  |
-| Memory Management 3                                          | :white_large_square: |
-| Memory Management 4                                          | :white_large_square: |
+| [Memory Management 3](08-3.%20Memory%20Management%203.md)    |  :white_check_mark:  |
+| [Memory Management 4](08-4.%20Memory%20Management%204.md)    |  :white_check_mark:  |
+| [Virtual Memory 1](09-1.%20Virtual%20Memory%201.md)          |  :white_check_mark:  |
+| [Virtual Memory 2](09-2.%20Virtual%20Memory%202.md)          |  :white_check_mark:  |
+| File Systems                                                 | :white_large_square: |
+| File Systems Implementation 1                                | :white_large_square: |
+| File Systems Implementation 2                                | :white_large_square: |
+| Disk Management and Scheduling 1                             | :white_large_square: |
+| Disk Management and Scheduling 2                             | :white_large_square: |
 
