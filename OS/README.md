@@ -32,7 +32,7 @@ http://www.kocw.net/home/search/kemView.do?kemId=1046323
 | [Virtual Memory 2](09-2.%20Virtual%20Memory%202.md)          |  :white_check_mark:  |
 | [File Systems](10-1.%20File%20Systems.md)                    |  :white_check_mark:  |
 | [File Systems Implementation 1](11-1.%20File%20Systems%20Implementation%201.md) |  :white_check_mark:  |
-| File Systems Implementation 2                                | :white_large_square: |
+| [File Systems Implementation 2](11-2.%20File%20Systems%20Implementation%202.md) |  :white_check_mark:  |
 | Disk Management and Scheduling 1                             | :white_large_square: |
 | Disk Management and Scheduling 2                             | :white_large_square: |
 
