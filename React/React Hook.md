@@ -1,12 +1,12 @@
 # React Hook
 
-[Reactjs.org > 문서 > Hook](https://ko.reactjs.org/docs/hooks-intro.html)를 정리한 내용.
+[Reactjs.org > 문서 > Hook](https://ko.reactjs.org/docs/hooks-intro.html)를 정리한 내용입니다.
 
 ## 1. Hook
 
 Hook은 React 16.8 버전에 새로 추가되었음
 
-기존 Class에서만 지원되던 state 등의 기능을 함수 컴포넌트에서도 가능하게 해준다.
+기존 Class에서만 지원되던 state, 생명주기 메서드 등의 기능을 함수 컴포넌트에서도 가능하게 해준다.
 
 ### **[동기](https://ko.reactjs.org/docs/hooks-intro.html#motivation)**
 
@@ -104,7 +104,7 @@ useEffect(() => {
 
 ```react
 useEffect(() => {
-    // effect 함수
+   effect 함수
 }, [의존성])
 ```
 
@@ -279,9 +279,9 @@ React는 컴포넌트에 사용된 모든 effect를 지정된 순서에 맞춰 �
 
 한 컴포넌트에서 state나 effect hook을 여러 개 사용할 수 있는데, React는 어떻게 특정 state가 어떤 useState 호출에 해당하는지 알 수 있을까?
 
-**React가 Hook이 호출되는 순서에 의존**하기 때문이다. 모든 렌더링에서 Hook의 호출 순서가 같기 때문에 올바르게 동작할 수 있다.
+**React가 Hook이 호출되는 순서에 의존**하기 때문에 가능하다. 모든 렌더링에서 Hook의 호출 순서가 같기 때문에 올바르게 동작할 수 있다.
 
-따라서 만약 조건문 내에서 Hook을 호출해, 조건에 따라 Hook이 호출될지 않을지 결정된다면, 렌더링마다 Hook 호출 순서가 달라진다.
+따라서 만약 조건문 내에서 Hook을 호출해서, 조건에 따라 어떤 Hook이 호출될지 않을지 결정된다면, 렌더링마다 Hook 호출 순서가 달라질 것이다. Hook의 호출 순서에 의존하는 React 특성상, 버그가 발생한다.
 
 => **컴포넌트 최상위에서 Hook이 호출되어야하는 이유**다.
 
@@ -294,7 +294,7 @@ React는 컴포넌트에 사용된 모든 effect를 지정된 순서에 맞춰 �
 **React의 상태 관련 로직을 컴포넌트 간 공유하는 두 가지 방법**
 
 - `render props`
-- 고차 컴포넌트
+- 고차 컴포넌트(HOC)
 
 Hook을 사용해 트리에 컴포넌트를 추가하지 않고 문제를 해결할 수 있다.
 
@@ -341,11 +341,28 @@ Custom Hook을 추출해 사용하더라도 작동 방식에 변화는 없다. �
 
 
 
-두 개의 컴포넌트가 같은 Custom Hook을 공유하더라도, 그 안의 state와 effect는 독립적이다.
+- **두 개의 컴포넌트가 같은 Custom Hook을 공유하더라도, 그 안의 state와 effect는 독립적이다.**
 
-각각의 Hook에 대한 호출은 서로 독립된 state를 받는다. 각 컴포넌트에서 Custom Hook을 직접 호출하기 때문에 React의 관점에서 컴포넌트는 useState나 useEffect를 호출한 것과 다름 없다.
+  각각의 Hook에 대한 호출은 서로 독립된 state를 받기 때문이다. 각 컴포넌트에서 Custom Hook을 직접 호출하기 때문에 React의 관점에서 컴포넌트는 useState나 useEffect를 호출한 것과 다름 없다.
 
 
+
+- Hook이 호출마다 독립적이라면 Hook에서 Hook으로 어떻게 정보를 전달할 수 있을까
+
+  ```react
+  const [userID, setUserID] = useState(1);
+  const isUserOnline = useUserStatus(userID);
+  ```
+
+  - 선택된 사용자가 온라인인지 아닌지를 판별하는 코드.
+  - `useState`Hook을 이용해 `userID` state를 만들어, 현재 선택된 사용자의 ID를 저장.
+  - 그리고 `userID`를 `useUserStatus` Hook의 인자로 전달.
+  - 이를 통해 현재 선택된 사용자의 온라인 여부를 알 수 있음. `setUserID`를 통해 `userID`가 변경될 때마다 `useUserStatus` Hook은 이전 선택된 사용자를 구독 취소하고 새로 선택된 사용자의 온라인 여부를 구독하게 됨.
+  - 이런 식으로 Hook 사이의 데이터를 공유할 수 있음.
+
+  
+
+  
 
 Custom Hook은 로직 공유의 유연성을 제공한다. 다양한 쓰임새에 적용할 수 있고, 사용하기 쉬운 Hook을 만들 수도 있다.
 
