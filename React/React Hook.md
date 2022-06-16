@@ -347,7 +347,7 @@ Custom Hook을 추출해 사용하더라도 작동 방식에 변화는 없다. �
 
 
 
-- Hook이 호출마다 독립적이라면 Hook에서 Hook으로 어떻게 정보를 전달할 수 있을까
+- Hook이 호출마다 독립적이라면 **Hook에서 Hook으로 어떻게 정보를 전달**할 수 있을까
 
   ```react
   const [userID, setUserID] = useState(1);
