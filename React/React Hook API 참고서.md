@@ -205,6 +205,53 @@ const [state, dispatch] = useReducer(reducer, initialArg, init);
 
 
 
+## useContext
+
+```react
+const value = useContext(MyContext);
+```
+
+context 객체를 받아 그 context의 현재 값을 반환. context의 현재 값은 트리 안에서 이 Hook을 호출하는 컴포넌트의 가장 가까운 Provider의 value prop이다.
+
+컴포넌트의 가장 가까운 Provider가 갱신되면 이 Hook은 그 MyContext provider에게 전달된 가장 최신의 context value를 사용하여 렌더러를 트리거한다.
+
+상위 컴포넌트에서 React.memo 또는 shouldComponentUpdate를 사용하더라도 useContext를 사용하고 있는 컴포넌트 자체에서부터 재렌더링된다.
+
+useContext로 전달하는 인자는 context 객체 그 자체여야한다.
+
+useContext를 호출한 컴포넌트는 context 값이 변경되면 항상 리렌더링되므로, 비용이 많이 든다면 메모이제이션을 사용해 최적화할 수 있다.
+
+useContext는 Context.Provider와 같이 사용하자.
+
+```react
+const ThemeContext = React.createContext(themes.light);
+
+function App() {
+  return (
+    <ThemeContext.Provider value={themes.dark}>
+      <Toolbar />
+    </ThemeContext.Provider>
+  );
+}
+
+function Toolbar(props) {
+  return (
+    <div>
+      <ThemedButton />
+    </div>
+  );
+}
+
+function ThemedButton() {
+  const theme = useContext(ThemeContext);
+  return (
+    <button style={{ background: theme.background, color: theme.foreground }}>
+      I am styled by theme context!
+    </button>
+  );
+}
+```
+
 
 
 
