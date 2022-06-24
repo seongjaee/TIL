@@ -48,6 +48,12 @@
   - Sharing Constants : JS와 CSS의 상태 공유
   - Non-deterministic Resolution : CSS 로드 우선 순위 이슈
   - Isolation : CSS와 JS의 상속에 따른 격리 필요 이슈
+- 컴포넌트 라이프 스타일에 맞게 스타일을 적용할 수 있기 때문에 동적 스타일 적용에 자유롭다.
+- 해당 컴포넌트가 렌더링 될때만 스타일 태그를 생성하기 때문에 컴포넌트 기반 프레임워크에 용이하다.
+- 원리
+  - 클래스 이름을 따로 명명하지 않는다. 브라우저 렌더링 시 webkit 엔진이 CSS 파일과 classname 태그를 기반으로 렌더링 트리를 생성하기 때문에 모든 CSS-in-JS는 CSS preprocessor를 내장한다.
+  - 런타임 시 각 컴포넌트를 hashing하여 동적인 클래스 네임을 생성하고 head 태그에 style태그를 추가한다.
+  - styled-components는 stylis(CSS preprocessor) 이용
 
 - 많은 라이브러리들
   - styled-components
