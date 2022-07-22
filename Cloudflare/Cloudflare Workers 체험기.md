@@ -12,7 +12,6 @@ We handle the rest.
 ```
 
 
-
 메인 페이지에 써있는 장점을 읽어보면
 
 - 빠르게 배포
@@ -63,7 +62,7 @@ $ wrangler init <YOUR_WORKER>
 
 4개 정도를 `(y/n)`으로 물어봤는데 전부 `y`를 입력해줬다. 아래 사진과 같이 프로젝트가 만들어진다.
 
-![image-20220723014109297](Cloudflare Workers 체험기.assets/image-20220723014109297.png)
+![image-20220723014109297](.assets/image-20220723014109297.png)
 
 
 
@@ -85,19 +84,17 @@ export default {
 
 
 
-
-
 ```bash
 $ wrangler dev
 ```
 
 위 명령어를 입력하면 로컬 서버가 실행된다.
 
-![image-20220723014405294](Cloudflare Workers 체험기.assets/image-20220723014405294.png)
+![image-20220723014405294](.assets/image-20220723014405294.png)
 
 
 
-![image-20220723014437351](Cloudflare Workers 체험기.assets/image-20220723014437351.png)
+![image-20220723014437351](.assets/image-20220723014437351.png)
 
 Hello World! 가 나온다.
 
@@ -107,7 +104,7 @@ Hello World! 가 나온다.
 
 브라우저를 새로고침하면 바뀐 걸 확인할 수 있다.
 
-![image-20220723014801477](Cloudflare Workers 체험기.assets/image-20220723014801477.png)
+![image-20220723014801477](.assets/image-20220723014801477.png)
 
 
 
@@ -117,7 +114,7 @@ Hello World! 가 나온다.
 $ wrangler publish
 ```
 
-![image-20220723015342080](Cloudflare Workers 체험기.assets/image-20220723015342080.png)
+![image-20220723015342080](.assets/image-20220723015342080.png)
 
 
 
@@ -158,7 +155,7 @@ $ wrangler publish
 
 publish된 후에 subdomain(`<내 WORKER>.<내 SUBDOMAIN>.workers.dev`)에 가보면 html이 나오는 걸 확인할 수 있다!
 
-![image-20220723020706708](Cloudflare Workers 체험기.assets/image-20220723020706708.png)
+![image-20220723020706708](.assets/image-20220723020706708.png)
 
 
 
@@ -239,4 +236,4 @@ $ wrangler publish
 
 publish된 후에 subdomain(`<내 WORKER>.<내 SUBDOMAIN>.workers.dev`)에 가보면 JSON이 나오는 걸 확인할 수 있다!
 
-![image-20220723024912443](Cloudflare Workers 체험기.assets/image-20220723024912443.png)
+![image-20220723024912443](.assets/image-20220723024912443.png)
