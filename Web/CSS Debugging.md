@@ -25,6 +25,3 @@ css 스타일 레이아웃을 만지다보면 원하는 결과가 나오지 않�
 공식문서를 가까이 하자.
 
 [https://developer.mozilla.org/ko/](https://developer.mozilla.org/ko/)
-
-[https://getbootstrap.com/docs/5.1/getting-started/introduction/](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
-
